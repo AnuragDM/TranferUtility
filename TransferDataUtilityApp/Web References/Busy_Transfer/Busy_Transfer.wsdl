@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckWebServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckWebServiceResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckWebServiceResponseResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertItems_Busy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="StdPack" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Mrp" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Dp" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Rp" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Syncid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DispName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PriceGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="primaryunit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Secondaryunit" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrimaryUnitfactor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="SecondaryUnitfactor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MOQ" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Promoted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="cgstper" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="sgstper" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="igstper" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Segment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductClass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertItems_BusyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertItems_BusyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckWebServiceResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckWebServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebServiceResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckWebServiceResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertItems_BusySoapIn">
+    <wsdl:part name="parameters" element="tns:InsertItems_Busy" />
+  </wsdl:message>
+  <wsdl:message name="InsertItems_BusySoapOut">
+    <wsdl:part name="parameters" element="tns:InsertItems_BusyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebServiceResponseHttpGetIn" />
+  <wsdl:message name="CheckWebServiceResponseHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="InsertItems_BusyHttpGetIn">
+    <wsdl:part name="ItemName" type="s:string" />
+    <wsdl:part name="Unit" type="s:string" />
+    <wsdl:part name="Active" type="s:string" />
+    <wsdl:part name="StdPack" type="s:string" />
+    <wsdl:part name="Mrp" type="s:string" />
+    <wsdl:part name="Dp" type="s:string" />
+    <wsdl:part name="Rp" type="s:string" />
+    <wsdl:part name="ParentName" type="s:string" />
+    <wsdl:part name="ItemCode" type="s:string" />
+    <wsdl:part name="Syncid" type="s:string" />
+    <wsdl:part name="ItemType" type="s:string" />
+    <wsdl:part name="DispName" type="s:string" />
+    <wsdl:part name="PriceGroup" type="s:string" />
+    <wsdl:part name="primaryunit" type="s:string" />
+    <wsdl:part name="Secondaryunit" type="s:string" />
+    <wsdl:part name="PrimaryUnitfactor" type="s:string" />
+    <wsdl:part name="SecondaryUnitfactor" type="s:string" />
+    <wsdl:part name="MOQ" type="s:string" />
+    <wsdl:part name="Promoted" type="s:string" />
+    <wsdl:part name="cgstper" type="s:string" />
+    <wsdl:part name="sgstper" type="s:string" />
+    <wsdl:part name="igstper" type="s:string" />
+    <wsdl:part name="Segment" type="s:string" />
+    <wsdl:part name="ProductClass" type="s:string" />
+    <wsdl:part name="Type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertItems_BusyHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebServiceResponseHttpPostIn" />
+  <wsdl:message name="CheckWebServiceResponseHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="InsertItems_BusyHttpPostIn">
+    <wsdl:part name="ItemName" type="s:string" />
+    <wsdl:part name="Unit" type="s:string" />
+    <wsdl:part name="Active" type="s:string" />
+    <wsdl:part name="StdPack" type="s:string" />
+    <wsdl:part name="Mrp" type="s:string" />
+    <wsdl:part name="Dp" type="s:string" />
+    <wsdl:part name="Rp" type="s:string" />
+    <wsdl:part name="ParentName" type="s:string" />
+    <wsdl:part name="ItemCode" type="s:string" />
+    <wsdl:part name="Syncid" type="s:string" />
+    <wsdl:part name="ItemType" type="s:string" />
+    <wsdl:part name="DispName" type="s:string" />
+    <wsdl:part name="PriceGroup" type="s:string" />
+    <wsdl:part name="primaryunit" type="s:string" />
+    <wsdl:part name="Secondaryunit" type="s:string" />
+    <wsdl:part name="PrimaryUnitfactor" type="s:string" />
+    <wsdl:part name="SecondaryUnitfactor" type="s:string" />
+    <wsdl:part name="MOQ" type="s:string" />
+    <wsdl:part name="Promoted" type="s:string" />
+    <wsdl:part name="cgstper" type="s:string" />
+    <wsdl:part name="sgstper" type="s:string" />
+    <wsdl:part name="igstper" type="s:string" />
+    <wsdl:part name="Segment" type="s:string" />
+    <wsdl:part name="ProductClass" type="s:string" />
+    <wsdl:part name="Type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertItems_BusyHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="Busy_TransferSoap">
+    <wsdl:operation name="CheckWebServiceResponse">
+      <wsdl:input message="tns:CheckWebServiceResponseSoapIn" />
+      <wsdl:output message="tns:CheckWebServiceResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <wsdl:input message="tns:InsertItems_BusySoapIn" />
+      <wsdl:output message="tns:InsertItems_BusySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Busy_TransferHttpGet">
+    <wsdl:operation name="CheckWebServiceResponse">
+      <wsdl:input message="tns:CheckWebServiceResponseHttpGetIn" />
+      <wsdl:output message="tns:CheckWebServiceResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <wsdl:input message="tns:InsertItems_BusyHttpGetIn" />
+      <wsdl:output message="tns:InsertItems_BusyHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Busy_TransferHttpPost">
+    <wsdl:operation name="CheckWebServiceResponse">
+      <wsdl:input message="tns:CheckWebServiceResponseHttpPostIn" />
+      <wsdl:output message="tns:CheckWebServiceResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <wsdl:input message="tns:InsertItems_BusyHttpPostIn" />
+      <wsdl:output message="tns:InsertItems_BusyHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Busy_TransferSoap" type="tns:Busy_TransferSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckWebServiceResponse">
+      <soap:operation soapAction="http://tempuri.org/CheckWebServiceResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <soap:operation soapAction="http://tempuri.org/InsertItems_Busy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Busy_TransferSoap12" type="tns:Busy_TransferSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckWebServiceResponse">
+      <soap12:operation soapAction="http://tempuri.org/CheckWebServiceResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <soap12:operation soapAction="http://tempuri.org/InsertItems_Busy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Busy_TransferHttpGet" type="tns:Busy_TransferHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CheckWebServiceResponse">
+      <http:operation location="/CheckWebServiceResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <http:operation location="/InsertItems_Busy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Busy_TransferHttpPost" type="tns:Busy_TransferHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CheckWebServiceResponse">
+      <http:operation location="/CheckWebServiceResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertItems_Busy">
+      <http:operation location="/InsertItems_Busy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Busy_Transfer">
+    <wsdl:port name="Busy_TransferSoap" binding="tns:Busy_TransferSoap">
+      <soap:address location="http://testmergefield.aspwork.co.in/Busy_Transfer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Busy_TransferSoap12" binding="tns:Busy_TransferSoap12">
+      <soap12:address location="http://testmergefield.aspwork.co.in/Busy_Transfer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Busy_TransferHttpGet" binding="tns:Busy_TransferHttpGet">
+      <http:address location="http://testmergefield.aspwork.co.in/Busy_Transfer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Busy_TransferHttpPost" binding="tns:Busy_TransferHttpPost">
+      <http:address location="http://testmergefield.aspwork.co.in/Busy_Transfer.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
